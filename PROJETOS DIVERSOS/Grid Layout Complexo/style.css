@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: [outer-start] 1fr [center-start] 1fr [center-end] 1fr [outer-end];
+    grid-template-rows: 100px 1fr 100px;
+    grid-gap: 10px;
+}
+
+.grid {
+    padding: 25px;
+    font-size: 2rem;
+}
+
+.topo {
+    background-color: lightseagreen;
+    grid-column: outer-start / outer-end;
+}
+
+.sidebar {
+    background-color: mediumseagreen;
+    grid-column: outer-start / center-start;   
+}
+
+.content {
+    background-color: mediumorchid;
+    grid-column: center-start / outer-end;
+}
+
+.rodape {
+    background-color: lightcoral;
+    grid-column: outer-start / outer-end;
+}
+/*
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: 
+            "topo topo topo"
+            "sidebar content content"
+            "rodape rodape rodape"
+    }
+}*/

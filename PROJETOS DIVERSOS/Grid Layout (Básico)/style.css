@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: palegreen;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(3, 150px);
+    max-width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.item {
+    background-color: firebrick;
+    color: #fff;
+    padding: 1rem;
+}
+
+.item:nth-child(even) {
+    background-color: tomato;
+}
